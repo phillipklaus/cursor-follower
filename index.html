@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cursor Follower</title>
+  <style>
+    #circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: purple;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="circle"></div>
+  <script>
+    const circle = document.getElementById('circle');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX;
+      const y = event.clientY;
+      circle.style.top = `${y}px`;
+      circle.style.left = `${x}px`;
+      
+    });
+  </script>
+</body>
+</html>
